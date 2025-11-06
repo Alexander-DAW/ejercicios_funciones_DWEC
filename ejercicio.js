@@ -57,7 +57,48 @@ function ejercicio3() {
 ejercicio3()
 
 function ejercicio4() {
-    
+    const calcularDescuento = document.getElementById("calcularDescuento")
+
+    calcularDescuento.addEventListener("click", function() {
+        const original = parseFloat(document.getElementById("precioOriginal").value)
+        const descuento = parseFloat(document.getElementById("descuento").value)
+
+        const precio = original - (original * descuento/100) 
+
+        document.getElementById("nuevoPrecio").innerHTML = "El precio final de su producto después de apicar un descuento del " + descuento + "% es: " + precio + " euros." 
+    })
 }
 
 ejercicio4()
+
+
+function ejercicio5() {
+    const calcularPrimos = document.getElementById("calcularPrimos")
+
+    calcularPrimos.addEventListener("click", function (){
+        const num1 = parseInt(document.getElementById("num1").value)
+        const num2 = parseInt(document.getElementById("num2").value)
+        const primos = []
+
+        for (let num = num1; num <= num2; num++) {
+            let contador = 0
+            for (let i = 2; i<num; i++) {
+                if (num%i == 0) {
+                    contador+=1
+                }          
+            }
+            if (contador == 0) {
+                primos.push(num)
+            }
+        
+        document.getElementById("numPrimos").innerHTML = "Los numeros primos son: " + primos
+        }
+    })
+}
+
+ejercicio5()
+
+function ejercicio6() {
+}
+
+ejercicio6()
