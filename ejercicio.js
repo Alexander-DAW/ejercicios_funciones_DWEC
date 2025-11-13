@@ -101,4 +101,4 @@ ejercicio5()
 function ejercicio6() {
 }
 
-ejercicio6()
+ejercicio6
